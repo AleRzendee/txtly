@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@tailwindcss/cli": "^4.0.10",
     "aos": "^2.3.4",
     "axios": "^1.8.1",
     "framer-motion": "^12.4.10",

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Header from "@/components/Header";
+import Header from "@/app/components/Header";
 
 export const metadata: Metadata = {
   title: "Txtly - Editor de Texto Profissional",
@@ -11,7 +11,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="pt">
       <body className="bg-gray-950 text-white">
-        <Header /> {/* Adicionando o Header */}
+        <Header /> 
         <main className="pt-20">{children}</main>
       </body>
     </html>

@@ -44,3 +44,5 @@ next-env.d.ts
 .vscode
 /.vscode/
 \.vscode
+settings.json
+docs.commands.json
