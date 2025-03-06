@@ -1,10 +1,19 @@
+import type { Metadata } from "next";
+import "./globals.css";
+import Header from "@/components/Header";
+
+export const metadata: Metadata = {
+  title: "Txtly - Editor de Texto Profissional",
+  description: "Edite e formate textos de forma simples e moderna",
+};
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="pt-BR">
-      <head>
-        <title>Txtly - Editor de Texto Online</title>
-      </head>
-      <body>{children}</body>
+    <html lang="pt">
+      <body className="bg-gray-950 text-white">
+        <Header /> {/* Adicionando o Header */}
+        <main className="pt-20">{children}</main>
+      </body>
     </html>
   );
 }

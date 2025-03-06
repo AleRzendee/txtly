@@ -22,5 +22,13 @@ export default function Header() {
             Planos
           </Link>
         </nav>
+        <button
+          className="md:hidden text-white text-2xl"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          ☰
+        </button>
+      </div>
+    </header>
   );
 }
