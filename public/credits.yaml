@@ -5,8 +5,8 @@ project:
        valids:
               author: Alexandre Rezende
               data-first-version: 02/03/2025
-              data-last-version: 06/03/2025
-              data-version: 1.0.3
+              data-last-version: 07/03/2025
+              data-version: 1.0.4
               description: Editor de Revolucionário
               email: &email / XXXXXXXXXXXXXXXXX@outlook.com
               password: &password / XXXXXXXXX
