@@ -1,18 +1,17 @@
 project:
-       name: txtly = Editor
-      #  url: http://exemplo.com
+  name: txtly = Editor
+  #  url: http://exemplo.com
 
-       valids:
-              author: Alexandre Rezende
-              data-first-version: 02/03/2025
-              data-last-version: 07/03/2025
-              data-version: 1.0.4
-              description: Editor de Revolucionário
-              email: &email / XXXXXXXXXXXXXXXXX@outlook.com
-              password: &password / XXXXXXXXX
-              license: MIT
-              done: false
-              url: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-              version: 1.0.0
-
+  valids:
+    author: Alexandre Rezende
+    data-first-version: 02/03/2025
+    data-last-version: 10/03/2025
+    data-version: 1.0.5
+    description: Editor de Revolucionário
+    email: &email / XXXXXXXXXXXXXXXXX@outlook.com
+    password: &password / XXXXXXXXX
+    license: MIT
+    done: false
+    url: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+    version: 1.0.0
 # TODO: Notes in YAML
