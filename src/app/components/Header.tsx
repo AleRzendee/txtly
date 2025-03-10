@@ -14,13 +14,13 @@ const Header = () => {
         </Link>
 
         <nav className="hidden md:flex gap-8 text-lg">
-          <Link href="#features" className="hover:text-blue-400 transition">
+          <Link href="#features" className="hover:text-blue-400 transition font-sans">
             Recursos
           </Link>
-          <Link href="#pricing" className="hover:text-blue-400 transition">
+          <Link href="#pricing" className="hover:text-blue-400 transition font-sans">
             Preços
           </Link>
-          <Link href="#contact" className="hover:text-blue-400 transition">
+          <Link href="#contact" className="hover:text-blue-400 transition font-sans">
             Contato
           </Link>
         </nav>
