@@ -30,13 +30,13 @@ const testimonials = [
     {
         name: "AnaLivi.a_",
         role: "Analista de Dados",
-        feedback: "Cara que ferramenta surreal de boa!! Um braço direito!! Me ajuda a criar interfaces de forma muito mais rápida.",
+        feedback: "O Txtly me ajudou a criar um conteúdo superior ao que esperava, realmente me ajudou a aumentar a visibilidade e qualidade do meu trabalho.",
         image: "/users/user-5.jpg",
     },
     {
         name: "KaioAraúj0",
-        role: "Desenvolvedor Front-End",
-        feedback: "Cara que ferramenta surreal de boa!! Um braço direito!! Me ajuda a criar interfaces de forma muito mais rápida.",
+        role: "Desenvolvedor Back-End",
+        feedback: "Sabia nem que precisava dela, mais agora percibi que sou dependente kkkkk incrível demais, muito divertida e o uso de IA me surpreendeu",
         image: "/users/user-6.jpg",
     },
 ];
