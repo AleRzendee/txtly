@@ -5,6 +5,9 @@ import Header from "@/app/components/Header";
 export const metadata: Metadata = {
   title: "Txtly - Editor de Texto Profissional",
   description: "Edite e formate textos de forma simples e moderna",
+  icons: {
+    icon: '/images/002-txtly_logo.png',
+  }
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

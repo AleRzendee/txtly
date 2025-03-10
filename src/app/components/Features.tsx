@@ -3,7 +3,7 @@ import { FaMagic, FaSyncAlt, FaUserLock, FaPaintBrush } from "react-icons/fa";
 
 const Features = () => {
     return (
-        <section className="py-20 bg-gray-900 text-white text-center px-6">
+        <section id="features" className="py-20 bg-gray-900 text-white text-center px-6">
             <h2 className="text-4xl font-bold mb-6">Por que escolher o Txtly?</h2>
             <p className="text-gray-300 max-w-2xl mx-auto mb-12">
                 O Txtly oferece uma experiência moderna, intuitiva e eficiente para a edição de texto. Confira alguns dos principais benefícios:
