@@ -1,34 +1,23 @@
-"use client";
+import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
 
 export default function Header() {
-  const [menuOpen, setMenuOpen] = useState(false);
-
   return (
-    <header className="bg-gray-900 fixed w-full top-0 left-0 z-50 shadow-md">
-      <div className="container mx-auto flex justify-between items-center p-4">
-        <Link href="/" className="text-white text-2xl font-bold">
-          Txtly
-        </Link>
-        <nav className={`md:flex gap-6 ${menuOpen ? "block" : "hidden"} md:block`}>
-          <Link href="#features" className="text-gray-300 hover:text-white">
-            Recursos
-          </Link>
-          <Link href="#editor" className="text-gray-300 hover:text-white">
-            Editor
-          </Link>
-          <Link href="#pricing" className="text-gray-300 hover:text-white">
-            Planos
-          </Link>
-        </nav>
-        <button
-          className="md:hidden text-white text-2xl"
-          onClick={() => setMenuOpen(!menuOpen)}
-        >
-          ☰
-        </button>
-      </div>
+    <header className="fixed top-0 left-0 w-full bg-gray-950 bg-opacity-90 backdrop-blur-md text-white flex items-center justify-between px-6 py-4 z-50 shadow-md">
+      <Link href="/" className="flex flex-col items-center">
+        <Image
+          src="/logo-header.png"
+          alt="Txtly Logo"
+          width={80}
+          height={80}
+        />
+      </Link>
+      <nav>
+        <ul className="flex space-x-6">
+          <li><Link href="#features" className="hover:text-blue-400">Recursos</Link></li>
+          <li><Link href="#editor" className="hover:text-blue-400">Editor</Link></li>
+        </ul>
+      </nav>
     </header>
   );
 }
