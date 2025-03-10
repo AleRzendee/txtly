@@ -11,7 +11,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="pt">
       <body className="bg-gray-950 text-white">
-        <Header /> 
+        <Header />
         <main className="pt-20">{children}</main>
       </body>
     </html>

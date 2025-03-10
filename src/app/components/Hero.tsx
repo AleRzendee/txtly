@@ -1,5 +1,5 @@
 "use client";
-import Image from "next/image";
+// import Image from "next/image";
 import Link from "next/link";
 
 const Hero = () => {
@@ -16,9 +16,9 @@ const Hero = () => {
         Experimente Agora
       </Link>
 
-      <div className="mt-10">
+      {/* <div className="mt-10">
         <Image src="/hero-image.png" alt="Editor Txtly" width={600} height={400} className="rounded-lg shadow-lg" />
-      </div>
+      </div> */}
     </section>
   );
 };

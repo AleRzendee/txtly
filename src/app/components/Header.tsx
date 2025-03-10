@@ -10,7 +10,7 @@ const Header = () => {
     <header className="fixed top-0 left-0 w-full bg-gray-950 bg-opacity-90 backdrop-blur-md text-white shadow-md z-50">
       <div className="container mx-auto flex items-center justify-between py-4 px-6">
         <Link href="/" className="flex items-center gap-3">
-          <Image src="/logo-header.png" alt="Txtly Logo" width={80} height={80} />
+          <Image src="./images/001-txtly_logotipo.png" alt="Txtly Logo" width={80} height={80} />
         </Link>
 
         <nav className="hidden md:flex gap-8 text-lg">
