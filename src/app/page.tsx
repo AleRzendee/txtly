@@ -1,8 +1,8 @@
 import Hero from "@/app/components/Hero";
 import Features from "@/app/components/Features";
 import HowItWorks from "@/app/components/HowItWorks";
-import Testimonials from "./components/Testimonials";
-import CallToAction from "./components/CallToAction";
+import Testimonials from "@/app/components/Testimonials";
+import CallToAction from "@/app/components/CallToAction";
 
 export default function Home() {
   return (
