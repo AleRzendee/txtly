@@ -7,7 +7,7 @@ const CallToAction = () => {
                 Experimente o Txtly e descubra um novo jeito de editar textos de forma simples, eficiente e poderosa.
             </p>
             <a
-                href="/editor"
+                href="/pricing"
                 className="bg-white text-blue-600 font-semibold px-6 py-3 rounded-lg shadow-lg hover:bg-gray-200 transition-all"
             >
                 Experimente Agora

@@ -43,7 +43,7 @@ const testimonials = [
 
 const Testimonials = () => {
     return (
-        <section className="py-20 bg-gray-900 text-white text-center px-6">
+        <section id="testimonials" className="py-20 bg-gray-900 text-white text-center px-6">
             <h2 className="text-4xl font-bold mb-6">O que dizem sobre o Txtly?</h2>
             <p className="text-gray-400 max-w-2xl mx-auto mb-12">
                 Veja o que nossos usuários estão falando sobre a experiência com o Txtly.
