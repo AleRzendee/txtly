@@ -1,5 +1,14 @@
 import PricingSection from "./Pricing";
 import Footer from "@/app/components/Footer";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Txt.ly ! Planos",
+    description: "Edite e formate textos de forma simples e moderna",
+    icons: {
+        icon: '/images/002-txtly_logo.png',
+    }
+};
 
 export default function PricingPage() {
     return (
