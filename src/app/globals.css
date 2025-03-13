@@ -13,3 +13,12 @@
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(45deg, #00aaff, #070764);
 }
+
+details > summary {
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+details[open] > summary {
+  color: #3b82f6;
+}
