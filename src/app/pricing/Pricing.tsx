@@ -19,6 +19,7 @@ const Pricing = () => {
                             <li>Armazenamento limitado</li>
                             <li>Suporte por e-mail</li>
                         </ul>
+
                         <Link href="#cta" className="block w-full text-center py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
                             Comece agora
                         </Link>

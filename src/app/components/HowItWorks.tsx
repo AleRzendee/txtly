@@ -3,8 +3,9 @@ import { FaPenFancy, FaPalette, FaSave } from "react-icons/fa";
 
 const HowItWorks = () => {
     return (
-        <section className="py-20 bg-gray-800 text-white text-center px-6">
+        <section id="how-it-works" className="py-20 bg-gray-800 text-white text-center px-6">
             <h2 className="text-4xl font-bold mb-6">Como funciona o Txtly?</h2>
+
             <p className="text-gray-300 max-w-2xl mx-auto mb-12">
                 Simples, rápido e poderoso! Veja como você pode criar e personalizar textos com o Txtly em poucos passos:
             </p>

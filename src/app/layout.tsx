@@ -3,7 +3,7 @@ import "./globals.css";
 import Header from "@/app/components/Header";
 
 export const metadata: Metadata = {
-  title: "Txtly - Editor de Texto Profissional",
+  title: "Txt.ly ! home",
   description: "Edite e formate textos de forma simples e moderna",
   icons: {
     icon: '/images/002-txtly_logo.png',

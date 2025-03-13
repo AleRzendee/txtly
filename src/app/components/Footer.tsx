@@ -35,9 +35,9 @@ const Footer = () => {
                 <div>
                     <h3 className="font-semibold text-lg text-blue-400 mb-3">Conecte-se</h3>
                     <div className="flex space-x-4 mb-4">
-                        <a href="#" className="hover:text-blue-300 text-xl"><FaInstagram /></a>
-                        <a href="#" className="hover:text-blue-300 text-xl"><FaLinkedin /></a>
-                        <a href="#" className="hover:text-blue-300 text-xl"><FaGithub /></a>
+                        <a href="https://www.instagram.com/rzendeee" className="hover:text-blue-300 text-xl"><FaInstagram /></a>
+                        <a href="https://www.linkedin.com/in/gustavorezendeee/" className="hover:text-blue-300 text-xl"><FaLinkedin /></a>
+                        <a href="#https://github.com/AleRzendee" className="hover:text-blue-300 text-xl"><FaGithub /></a>
                     </div>
                     <p className="text-gray-400 text-sm">Entre em contato:</p>
                     <p className="text-gray-300 flex items-center space-x-2">
