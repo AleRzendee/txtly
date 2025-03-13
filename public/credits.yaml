@@ -6,7 +6,7 @@ project:
     author: Alexandre Rezende
     data-first-version: 02/03/2025
     data-last-version: 13/03/2025
-    data-version: 1.0.7
+    data-version: 1.0.8
     description: Editor de Revolucionário
     email: &email / XXXXXXXXXXXXXXXXX@outlook.com
     password: &password / XXXXXXXXX
@@ -14,4 +14,10 @@ project:
     done: false
     url: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
     version: 1.0.0
+
+    mongodb:
+      url: # MongoDB URL
+      database: txtly
+      collection: txtly
+      version: 1 # MongoDB version
 # TODO: Notes in YAML
