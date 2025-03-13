@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const Hero = () => {
   return (
-    <section className="h-screen flex flex-col items-center justify-center text-center bg-gradient-to-b from-gray-950 to-gray-900 text-white px-6">
+    <section data-aos="fade-up" className="h-screen flex flex-col items-center justify-center text-center bg-gradient-to-b from-gray-950 to-gray-900 text-white px-6">
       <h1 className="text-5xl md:text-6xl font-bold leading-tight">
         Transforme suas ideias em <span className="text-blue-500">texto</span> com facilidade
       </h1>
