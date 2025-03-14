@@ -75,7 +75,7 @@ export default function ContatoPage() {
 
                 <div className="mt-8 text-center">
                     <h2 className="text-xl font-semibold mb-4">Outras formas de contato</h2>
-                    <p className="text-gray-300">📧 Email: suporte@txtly.com</p>
+                    <p className="text-gray-300">📧 Email: devgustavorezende@outlook.com</p>
                     <p className="text-gray-300">📞 Tel: +55 0800 3556-9009</p>
                 </div>
 
