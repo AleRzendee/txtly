@@ -46,3 +46,8 @@ next-env.d.ts
 \.vscode
 settings.json
 docs.commands.json
+
+# Prisma ORM
+lib
+/lib
+.env
