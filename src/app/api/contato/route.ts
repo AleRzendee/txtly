@@ -1,27 +1,23 @@
-import { NextRequest, NextResponse } from "next/server";
-import { PrismaClient } from "@prisma/client";
+import { NextResponse } from "next/server";
+import prisma from "../../../../lib/prisma";
 
-const prisma = new PrismaClient();
+export async function POST(request: Request) {
+  const { nome, email, assunto } = await request.json();
 
-export async function POST(req: NextRequest) {
-    try {
-        const { nome, email, assunto } = await req.json();
+  try {
 
-        if (!nome || !email || !assunto) {
-            return NextResponse.json({ error: "Todos os campos são obrigatórios." }, { status: 400 });
-        }
+    const contato = await prisma.contato.create({
+      data: {
+        nome,
+        email,
+        assunto,
+      },
+    });
 
-        const novoContato = await prisma.contato.create({
-            data: { nome, email, assunto },
-        });
-
-        return NextResponse.json(novoContato, { status: 201 });
-
-    } catch (error) {
-        if (error instanceof Error) {
-            console.error("Erro ao salvar contato:", error.message);
-            return NextResponse.json({ error: "Erro ao salvar contato", details: error.message }, { status: 500 });
-        }
-        return NextResponse.json({ error: "Erro desconhecido" }, { status: 500 });
-    }
+    return NextResponse.json({ message: "Contato enviado com sucesso", contato }, { status: 200 });
+  } catch (error) {
+    console.error(error);
+    return NextResponse.json({ error: "Erro ao salvar o contato" }, { status: 500 });
+    
+  }
 }
