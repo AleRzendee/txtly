@@ -51,3 +51,4 @@ docs.commands.json
 lib
 /lib
 .env
+.env.local
