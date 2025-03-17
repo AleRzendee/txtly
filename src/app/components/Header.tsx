@@ -9,7 +9,6 @@ const Header = () => {
   return (
     <header id="header" className="fixed top-0 left-0 w-full bg-gray-950 text-white shadow-md z-50">
       <div className="container mx-auto flex justify-between items-center py-4 px-6">
-
         <Link href="/" className="text-3xl font-extrabold tracking-wide">
           <Image src="./images/001-txtly_logotipo.png" width={100} height={100} alt="Logo" />
         </Link>
@@ -37,7 +36,7 @@ const Header = () => {
               Entrar
             </button>
           </Link>
-          <Link href="/cadastro">
+          <Link href="/register">
             <button className="bg-green-600 px-5 py-2 rounded-md hover:bg-green-500 transition">
               Cadastre-se
             </button>

@@ -15,10 +15,9 @@ model Contato {
   createdAt DateTime @default(now())
 }
 
-model Usuario {
+model User {
   id        String   @id @default(uuid())
-  nome      String
   email     String   @unique
-  senha     String
+  password  String
   createdAt DateTime @default(now())
 }
