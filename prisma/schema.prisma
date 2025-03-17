@@ -8,9 +8,17 @@ datasource db {
 }
 
 model Contato {
-  id       String   @id @default(uuid())
-  nome     String
-  email    String   @unique
-  assunto  String
-  criadoEm DateTime @default(now())
+  id        String   @id @default(uuid())
+  nome      String
+  email     String   @unique
+  assunto   String
+  createdAt DateTime @default(now())
+}
+
+model Usuario {
+  id        String   @id @default(uuid())
+  nome      String
+  email     String   @unique
+  senha     String
+  createdAt DateTime @default(now())
 }
