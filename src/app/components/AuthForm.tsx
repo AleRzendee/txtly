@@ -1,62 +1,60 @@
 "use client";
-
 import { useState } from "react";
-import Input from "./Input";
 import { useRouter } from "next/navigation";
 
-interface AuthFormProps {
-    type: "login" | "register";
-}
-
-export default function AuthForm({ type }: AuthFormProps) {
-    const [form, setForm] = useState({ email: "", password: "", confirmPassword: "" });
-    const [loading, setLoading] = useState(false);
-    const [error, setError] = useState("");
+export default function AuthForm({ type }: { type: "login" | "register" }) {
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [message, setMessage] = useState("");
     const router = useRouter();
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        setLoading(true);
-        setError("");
 
-        if (type === "register" && form.password !== form.confirmPassword) {
-            setError("As senhas não coincidem!");
-            setLoading(false);
-            return;
-        }
+        const endpoint = type === "login" ? "/api/auth/login" : "/api/auth/register";
+        const res = await fetch(endpoint, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ email, password }),
+        });
 
-        try {
-            const res = await fetch(`/api/auth/${type}`, {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(form),
-            });
-
-            const data = await res.json();
-            if (!res.ok) throw new Error(data.message || "Erro desconhecido");
-
-            router.push("/");
-        } catch (err: any) {
-            setError(err.message);
-        } finally {
-            setLoading(false);
+        const data = await res.json();
+        if (res.ok) {
+            setMessage(data.message);
+            if (type === "login") {
+                localStorage.setItem("token", data.token);
+                router.push("/dashboard");
+            }
+        } else {
+            setMessage(data.message);
         }
     };
 
     return (
-        <div className="w-full max-w-md p-6 bg-gray-900 rounded-lg shadow-md">
-            <h2 className="text-2xl font-bold text-white text-center">{type === "login" ? "Entrar" : "Criar Conta"}</h2>
-            {error && <p className="mt-2 text-sm text-red-500">{error}</p>}
-            <form onSubmit={handleSubmit} className="mt-4 flex flex-col gap-4">
-                <Input label="Email" name="email" placeholder="Digite seu email" />
-                <Input label="Senha" type="password" name="password" placeholder="Digite sua senha" />
-                {type === "register" && <Input label="Confirmar Senha" type="password" name="confirmPassword" placeholder="Confirme sua senha" />}
-                <button
-                    type="submit"
-                    className="w-full p-2 bg-blue-600 hover:bg-blue-700 rounded text-white font-semibold"
-                    disabled={loading}
-                >
-                    {loading ? "Carregando..." : type === "login" ? "Entrar" : "Registrar"}
+        <div className="max-w-md mx-auto bg-gray-800 p-6 rounded-lg">
+            <h2 className="text-2xl font-bold text-center mb-4">
+                {type === "login" ? "Entrar" : "Criar Conta"}
+            </h2>
+            {message && <p className="text-red-400">{message}</p>}
+            <form onSubmit={handleSubmit} className="flex flex-col space-y-4">
+                <input
+                    type="email"
+                    placeholder="E-mail"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    className="p-2 rounded bg-gray-700 text-white"
+                    required
+                />
+                <input
+                    type="password"
+                    placeholder="Senha"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    className="p-2 rounded bg-gray-700 text-white"
+                    required
+                />
+                <button type="submit" className="bg-blue-500 hover:bg-blue-600 p-2 rounded text-white">
+                    {type === "login" ? "Entrar" : "Cadastrar"}
                 </button>
             </form>
         </div>

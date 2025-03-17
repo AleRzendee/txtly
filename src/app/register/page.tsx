@@ -1,8 +1,17 @@
-import AuthForm from "@/app/components/AuthForm";
+import AuthForm from "../components/AuthForm";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Txt.ly ! Cadastro",
+    description: "Edite e formate textos de forma simples e moderna",
+    icons: {
+        icon: '/images/002-txtly_logo.png',
+    }
+};
 
 export default function RegisterPage() {
     return (
-        <div className="flex min-h-screen items-center justify-center bg-gray-950">
+        <div className="min-h-screen flex justify-center items-center bg-gray-900">
             <AuthForm type="register" />
         </div>
     );
