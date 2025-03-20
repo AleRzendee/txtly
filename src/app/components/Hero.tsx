@@ -1,10 +1,11 @@
 "use client";
-// import Image from "next/image";
+import Image from "next/image";
 import Link from "next/link";
+import heroImage from "./public/images/001-txtly-scs.png";
 
 const Hero = () => {
   return (
-    <section data-aos="fade-up" className="h-screen flex flex-col items-center justify-center text-center bg-gradient-to-b from-gray-950 to-gray-900 text-white px-6">
+    <section data-aos="fade-up" className="h-screen flex flex-col items-center justify-center text-center bg-gradient-to-b from-gray-950 to-gray-900 text-white px-6 pt-16">
       <h1 className="text-5xl md:text-6xl font-bold leading-tight">
         Transforme suas ideias em <span className="text-blue-500">texto</span> com facilidade
       </h1>
@@ -17,9 +18,9 @@ const Hero = () => {
         Experimente Agora
       </Link>
 
-      {/* <div className="mt-10">
-        <Image src="/hero-image.png" alt="Editor Txtly" width={600} height={400} className="rounded-lg shadow-lg" />
-      </div> */}
+      <div className="mt-10">
+        <Image src={heroImage} alt="Editor Txtly" width={600} height={400} className="rounded-lg shadow-lg" />
+      </div>
     </section>
   );
 };
